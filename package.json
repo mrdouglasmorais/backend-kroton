@@ -11,14 +11,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.6.5"
+    "sequelize": "^5.8.4",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
-    "sequelize-cli": "^6.2.0",
     "nodemon": "^2.0.12",
+    "sequelize-cli": "^6.2.0",
     "sucrase": "^3.20.0"
   }
 }
