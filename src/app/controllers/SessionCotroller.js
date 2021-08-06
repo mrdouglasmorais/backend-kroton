@@ -10,7 +10,7 @@ class SessionCotroller{
     const user = await User.findOne({ where: { email }});
 
     if (!user){
-      return res.status(401).json({ message: 'Usuário não emcontrado' });
+      return res.status(401).json({ message: 'Usuário não encontrado' });
     }
 
     if (!(await user.checkPassword(password))){
@@ -26,7 +26,7 @@ class SessionCotroller{
         name,
         email,
       },
-      token: jwt.sign({ id }, authConfig.secret, {
+      token: jwt.sign({ id, name, email }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
       })
     })
