@@ -36,5 +36,8 @@ Para remover todas as migration `yarn sequelize migration:db:undo` ou `npx seque
 
 [Aula 03 - middlewares e update](https://github.com/mrdouglasmorais/backend-kroton/tree/332374093a272e2830955dadeb951cf9745508b3)
 
+[Aula 04 - Criando relacionamentos](https://github.com/mrdouglasmorais/backend-kroton/commit/1c19e3fe35b0759328eaae12093d735ad3511cb9)
+
+
 #### Professor:
 #### Douglas Morais
