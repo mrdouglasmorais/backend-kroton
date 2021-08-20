@@ -38,6 +38,8 @@ Para remover todas as migration `yarn sequelize migration:db:undo` ou `npx seque
 
 [Aula 04 - Criando relacionamentos](https://github.com/mrdouglasmorais/backend-kroton/commit/1c19e3fe35b0759328eaae12093d735ad3511cb9)
 
+[Aula 05 - Criando agendamentos](https://github.com/mrdouglasmorais/backend-kroton/commit/1c19e3fe35b0759328eaae12093d735ad3511cb9)
+
 
 #### Professor:
 #### Douglas Morais
