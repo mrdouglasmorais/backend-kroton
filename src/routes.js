@@ -1,12 +1,16 @@
 import { Router } from 'express';
-const routes = new Router();
+import multer from 'multer';
 
 import UserController from './app/controllers/UserController';
 import SessionCotroller from './app/controllers/SessionCotroller';
 import AppointmentsController from './app/controllers/AppointmentsController';
+import FileController from './app/controllers/FileController';
 
-import authMiddleware from './app/middeware/auth'
+import authMiddleware from './app/middeware/auth';
+import multerConfig from './config/multer';
 
+const routes = new Router();
+const updloads = multer(multerConfig);
 
 routes.get('/', (req, res) => {
   res.json({ message: 'Hello kroton'})
@@ -24,5 +28,8 @@ routes.put('/users', UserController.update);
 routes.get('/appointments', AppointmentsController.index);
 
 routes.post('/appointments', AppointmentsController.store);
+
+// upload de arquivos
+routes.post('/files', updloads.single('file'), FileController.store);
 
 export default routes;
