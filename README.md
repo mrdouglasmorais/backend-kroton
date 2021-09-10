@@ -44,7 +44,7 @@ Para remover todas as migration `yarn sequelize migration:db:undo` ou `npx seque
 
 [Aula 07 - Variaveis de ambiente](https://github.com/mrdouglasmorais/backend-kroton/tree/d526c577367b4b1d3a40bfba9ef31e820fa7897c)
 
-[Aula 08 - Conectando a um banco não relacional](https://github.com/mrdouglasmorais/backend-kroton/tree/d526c577367b4b1d3a40bfba9ef31e820fa7897c)
+[Aula 08 - Conectando a um banco não relacional](https://github.com/mrdouglasmorais/backend-kroton/tree/cb1474b0596a03f2991a505b7494e9f31b1e1377)
 
 [Aula 09 - Documentando com SWAGGER](https://github.com/mrdouglasmorais/backend-kroton/tree/d526c577367b4b1d3a40bfba9ef31e820fa7897c)
 
