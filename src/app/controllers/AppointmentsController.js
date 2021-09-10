@@ -4,6 +4,8 @@ import pt from 'date-fns/locale/pt-BR';
 import User from '../models/User';
 import Appointment from '../models/Appointment';
 
+import Notifications from '../schema/Notifications';
+
 class AppointmentsController {
   async index(req, res) {
     const { page = 1 } = req.query;
@@ -68,13 +70,24 @@ class AppointmentsController {
       return res.status(400).json({
         message: 'Sem horário disponível'
       })      
-    }
+    };
     
     const appointment = await Appointment.create({
       user_id: req.userID,
       collaborator_id,
       date: startHour,
-    })
+    });
+
+    const user = await User.findByPk(req.userID)
+    const formatDate = format(
+      startHour,
+      "'dia' dd 'de' MMMM', às' H:mm'h'"
+    )
+
+    await Notifications.create({
+      content: `Novo de agendamento de ${user.name}. em: ${formatDate}`,
+      user: collaborator_id
+    });
 
     return res.status(200).json(appointment);
   }
